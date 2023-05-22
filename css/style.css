@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue-bg: hsl(252, 100%, 67%);
+    --light-royal-blue-bg: hsl(241, 81%, 54%);
+    --violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+}
+
+/* global css style */
+body {
+    min-height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*my own css start here*/
+
+.container {
+    box-shadow: rgba(141, 173, 190, 0.24) 0px 3px 8px;
+    border-radius: 2rem;
+    width: 650px;
+    background-color: var(--White);
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 50%;
+    border-radius: 1.3rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.left h4 {
+    font-size: 1.3rem;
+    color: var(--light-lavender);
+    margin-bottom: 1rem;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom, var(--violet-blue-circle), var(--persian-blue-circle));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.circle span {
+    color: var(--white);
+    font-size: 3.5rem;
+}
+
+.circle p {
+    color: var(--light-lavender);
+}
+
+.left b {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.left p {
+    font-size: 1rem;
+    color: var(--light-lavender);
+    width: 200px;
+}
+
+.right {
+    width: 50%;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+}
+
+.right h1 {
+    font-size: 1.3rem;
+    color: var(--dark-gray-blue);
+    margin-bottom: 2rem;
+}
+
+.scores {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+
+}
+
+.score p {
+    color: var(--dark-gray-blue);
+}
+
+.badge {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.score:nth-child(1) {
+    background-color: hsla(39, 100%, 56%, .2);
+}
+
+.score:nth-child(1) .badge {
+    color: var(--light-red);
+}
+
+.score:nth-child(2) {
+    background-color: hsla(39, 100%, 56%, .2);
+}
+
+
+.score:nth-child(2) .badge {
+    color: var(--orangey-yellow);
+}
+
+.score:nth-child(3) {
+    background-color: hsla(166, 100%, 36%, .2);
+}
+
+.score:nth-child(3) .badge {
+    color: var(--green-teal);
+}
+
+.score:nth-child(4) {
+    background-color: hsla(234, 85%, 45%, .2);
+    margin-bottom: 1rem;
+}
+
+.score:nth-child(4) .badge {
+    color: var(--cobalt-blue);
+}
+
+.btn {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--dark-gray-blue);
+    border-radius: 2rem;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, var(--light-slate-blue-bg), var(--light-royal-blue-bg));
+}
+
+
+@media screen and (max-width:650px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .left {
+        border-radius: 0 0 1rem 1rem;
+        width: 100%;
+    }
+
+    .left p {
+        width: 250px;
+    }
+
+    .right {
+        width: 100%;
+    }
+}
